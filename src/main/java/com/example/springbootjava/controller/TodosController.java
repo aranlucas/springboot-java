@@ -23,7 +23,7 @@ public class TodosController {
     }
 
     @PostMapping("/")
-    public Todo newTodo(@RequestParam Todo newTodo) {
+    public Todo newTodo(@RequestBody Todo newTodo) {
         return todoRepository.save(newTodo);
     }
 
