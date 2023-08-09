@@ -3,8 +3,11 @@ package com.example.springbootjava.controller;
 import com.example.springbootjava.domain.Todo;
 import com.example.springbootjava.exceptions.TodoNotFoundException;
 import com.example.springbootjava.repository.TodoRepository;
-import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.SortDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,8 +21,8 @@ public class TodosController {
     }
 
     @GetMapping("/")
-    public List<Todo> allTodos() {
-        return todoRepository.findAll();
+    public Page<Todo> allTodos(@SortDefault(sort = "id") Pageable page) {
+        return todoRepository.findAll(page);
     }
 
     @PostMapping("/")
