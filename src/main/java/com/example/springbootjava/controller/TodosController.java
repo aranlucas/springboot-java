@@ -3,7 +3,7 @@ package com.example.springbootjava.controller;
 import com.example.springbootjava.domain.Todo;
 import com.example.springbootjava.exceptions.TodoNotFoundException;
 import com.example.springbootjava.repository.TodoRepository;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +18,7 @@ public class TodosController {
     }
 
     @GetMapping("/")
-    public Iterable<Todo> allTodos() {
+    public List<Todo> allTodos() {
         return todoRepository.findAll();
     }
 

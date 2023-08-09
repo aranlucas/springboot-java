@@ -3,7 +3,7 @@
 The following was discovered as part of building this project:
 
 * The original package name 'com.example.springboot-java' is invalid and this project uses 'com.example.springbootjava'
-  instead.
+instead.
 
 # Getting Started
 
@@ -34,4 +34,3 @@ The following guides illustrate how to use some features concretely:
 These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
- 
