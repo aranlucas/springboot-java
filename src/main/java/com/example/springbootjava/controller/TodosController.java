@@ -3,7 +3,6 @@ package com.example.springbootjava.controller;
 import com.example.springbootjava.domain.Todo;
 import com.example.springbootjava.exceptions.TodoNotFoundException;
 import com.example.springbootjava.repository.TodoRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

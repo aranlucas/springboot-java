@@ -41,6 +41,9 @@ spotless {
 		endWithNewline()
 	}
 	java {
+		importOrder()
+		removeUnusedImports()
+
 		cleanthat()
 		// apply a specific flavor of google-java-format
 		googleJavaFormat().aosp()

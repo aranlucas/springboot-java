@@ -1,11 +1,13 @@
-# Read Me First
+# Java ToDo SpringBoot
 
-The following was discovered as part of building this project:
+This is a sample SpringBoot application running on https://railway.app/
 
-* The original package name 'com.example.springboot-java' is invalid and this project uses 'com.example.springbootjava'
-instead.
+## Getting Started
 
-# Getting Started
+### Setting up environment
+
+1. Rename `src/main/java/resources/dev.sample.properties` -> `dev.properties` and add corresponding variables from
+railway
 
 ### Reference Documentation
 
@@ -16,7 +18,6 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.1/gradle-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.1/reference/htmlsingle/#web)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.1.1/reference/htmlsingle/#using.devtools)
-* [Thymeleaf](https://docs.spring.io/spring-boot/docs/3.1.1/reference/htmlsingle/#web.servlet.spring-mvc.template-engines)
 * [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.1.1/reference/htmlsingle/#data.sql.jpa-and-spring-data)
 
 ### Guides
