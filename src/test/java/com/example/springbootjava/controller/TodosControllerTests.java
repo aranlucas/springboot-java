@@ -1,11 +1,12 @@
 package com.example.springbootjava.controller;
 
+import com.example.springbootjava.todo.Todo;
+import com.example.springbootjava.todo.TodoService;
+import com.example.springbootjava.todo.TodosController;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.when;
 
-import com.example.springbootjava.domain.Todo;
-import com.example.springbootjava.repository.TodoRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +23,7 @@ import org.springframework.data.domain.Pageable;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class TodosControllerTests {
-    @Mock private TodoRepository repository;
+    @Mock private TodoService repository;
 
     private TodosController controller;
 

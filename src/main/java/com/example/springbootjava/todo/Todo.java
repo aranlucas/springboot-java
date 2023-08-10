@@ -1,9 +1,10 @@
-package com.example.springbootjava.domain;
+package com.example.springbootjava.todo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Todo {
+public class Todo implements Serializable {
     private String content;
 
     @Id @GeneratedValue private Long id;
