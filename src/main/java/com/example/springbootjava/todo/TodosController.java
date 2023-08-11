@@ -1,5 +1,7 @@
 package com.example.springbootjava.todo;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/todos")
+@Tag(name = "Todos", description = "Todo management APIs")
 public class TodosController {
 
     TodoService todoService;
@@ -24,21 +27,25 @@ public class TodosController {
     }
 
     @GetMapping
+    @Operation(summary = "Retrieve all todos", description = "Retrieve all todos")
     public Page<Todo> allTodos(@SortDefault(sort = "id") Pageable page) {
         return todoService.findAll(page);
     }
 
     @PostMapping
+    @Operation(summary = "Create a new todo", description = "Create todo")
     public Todo newTodo(@RequestBody Todo newTodo) {
         return todoService.save(newTodo);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Get a todo", description = "Get todo")
     public Todo getTodo(@PathVariable String id) {
         return todoService.findById(id).orElseThrow(() -> new TodoNotFoundException(id));
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = "Delete a todo", description = "Delete todo")
     public void deleteTodo(@PathVariable String id) {
         todoService.deleteById(id);
     }
