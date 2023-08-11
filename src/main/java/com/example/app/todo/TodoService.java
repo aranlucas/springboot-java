@@ -19,7 +19,6 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    @Cacheable("todos")
     public Page<Todo> findAll(Pageable page) {
         return todoRepository.findAll(page);
     }
