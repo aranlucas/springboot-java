@@ -1,12 +1,12 @@
 package com.example.springbootjava.controller;
 
-import com.example.springbootjava.todo.Todo;
-import com.example.springbootjava.todo.TodoService;
-import com.example.springbootjava.todo.TodosController;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.when;
 
+import com.example.springbootjava.todo.Todo;
+import com.example.springbootjava.todo.TodoService;
+import com.example.springbootjava.todo.TodosController;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
