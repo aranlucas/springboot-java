@@ -1,4 +1,4 @@
-package com.example.springbootjava.todo;
+package com.example.app.todo;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

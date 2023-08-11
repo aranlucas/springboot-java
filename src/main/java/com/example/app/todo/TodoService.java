@@ -1,4 +1,4 @@
-package com.example.springbootjava.todo;
+package com.example.app.todo;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

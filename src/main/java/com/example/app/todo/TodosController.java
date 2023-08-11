@@ -1,4 +1,4 @@
-package com.example.springbootjava.todo;
+package com.example.app.todo;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
