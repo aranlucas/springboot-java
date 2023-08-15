@@ -18,4 +18,6 @@ public class Todo implements Serializable {
     private String content;
 
     @Id @GeneratedValue private Long id;
+
+    private String email;
 }

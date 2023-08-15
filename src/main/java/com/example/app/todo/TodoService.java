@@ -19,8 +19,8 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public Page<Todo> findAll(Pageable page) {
-        return todoRepository.findAll(page);
+    public Page<Todo> findAll(String email, Pageable page) {
+        return todoRepository.findByEmail(email, page);
     }
 
     @CachePut(value = "todos", key = "#todo.id")

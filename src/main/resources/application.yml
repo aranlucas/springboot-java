@@ -1,0 +1,45 @@
+auth0:
+  audience: https://springboot-java-production-f5e9.up.railway.app/
+spring:
+  config:
+    import: optional:dev.properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    password: ${PGPASSWORD}
+    username: ${PGUSER}
+    url: ${SPRING_DATASOURCE_URL}
+  cache:
+    type: redis
+    redis:
+      time-to-live: '600000'
+  data:
+    redis:
+      url: ${REDIS_DATASOURCE_URL}
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            provider: auth0
+            client-id: ${AUTH0_CLIENT_ID}
+            client-secret: ${AUTH0_CLIENT_SECRET}
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            issuer-uri: https://dev-ntzoif436jqcr1ml.us.auth0.com/
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.auth0.example: TRACE
