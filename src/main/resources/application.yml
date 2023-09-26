@@ -43,3 +43,7 @@ logging:
     root: ERROR
     org.springframework.web: ERROR
     com.auth0.example: TRACE
+
+server:
+  tomcat:
+    max-threads: 1
