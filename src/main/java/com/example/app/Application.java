@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class Application {
     public static void main(String[] args) {
+        System.out.println("Running java version " + System.getProperty("java.version"));
         SpringApplication.run(Application.class, args);
     }
 }
